@@ -1,0 +1,27 @@
+select to_date(created, 'yyyy-mm') as month, count(id) as loans, sum(amount),avg(amount) as average,
+min(amount) as smallest, max(amount) as largest
+--(Column:"Created") gets converted to a date date type from a string data type in order to specify a given month
+--Most columns are displayed accordingly to clarify information using the AS command
+--Aggregate functions are used to retrieve data points
+from loans
+--Retrieval from "loans" table
+group by month
+--Query is grouped by month to specify data within any given month
+order by month desc;
+--Function to sort from most recent to latest months
+
+  month    | loans |  sum  |       average        | smallest | largest
+------------+-------+-------+----------------------+----------+---------
+ 2020-05-01 |     1 |   316 | 316.0000000000000000 |      316 |     316
+ 2020-04-01 |    42 | 13035 | 310.3571428571428571 |       10 |    2599
+ 2020-03-01 |    10 |  1509 | 150.9000000000000000 |        1 |     528
+ 2020-01-01 |     6 |  1908 | 318.0000000000000000 |      200 |     528
+ 2019-11-01 |     1 |   440 | 440.0000000000000000 |      440 |     440
+ 2019-10-01 |     1 |   240 | 240.0000000000000000 |      240 |     240
+ 2019-08-01 |     2 |   480 | 240.0000000000000000 |      240 |     240
+ 2019-05-01 |     3 |   880 | 293.3333333333333333 |      240 |     400
+ 2019-02-01 |     1 |   240 | 240.0000000000000000 |      240 |     240
+ 2018-10-01 |     1 |   400 | 400.0000000000000000 |      400 |     400
+ 2017-12-01 |     3 |   720 | 240.0000000000000000 |      240 |     240
+ 2017-07-01 |     1 |   240 | 240.0000000000000000 |      240 |     240
+ 2017-04-01 |     2 |   480 | 240.0000000000000000 |      240 |     240
