@@ -1,0 +1,16 @@
+-Data Analysis
+
+	Upon doing an analysis, there was a significant positive correlation between users who used the /tool/storyboard page and 
+weekly logins. Out of 10,421 weekly logins and 6 different used pages, 9,133 weekly logins came from users who used the/tool/storyboard
+page. Upon looking at the 8 different industries, there was also a strong correlation from the technology sector with 5,313 logins. For 
+those who had a free trial and had salesforce integration, more than 50% of the logins came from them with 6,154 and 6,050 weekly logins 
+respectively. Sales calls that were not in trial had 6,281 weekly logins and out of the 3 territories, users from the west accounted for
+4,840 weekly logins. Out of 4 comany sizes, companies that were sized between $100m-$500m accounted for roughly 46% of weekly logins with
+the next highest number for company size being about 22%.
+
+	For this analysis, I used the Tableau desktop tool. Using Tableau, I was able to combine the different dimensions and the weekly_login
+measure that were available in the CSV file, which also had other measures that were positively correlated with weekly_logins. The graphs
+showed me the amount of logins per dimension and also showed me the amount of dimensions that were available. That was how I was able to come up
+with my conclusion that most logins came from users in the technology sector and used the /tool/storyboard page.
+	
+	
