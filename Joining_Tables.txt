@@ -2,9 +2,8 @@ select loans.id as loan_id , loans.amount, users.id as user_id, users.created,tr
 --Selected coulumns are to be displayed respectively and clarifed
 from loans join users on loans.user_id = users.id  join transactions on loans.id = transactions.loan_id
 --Tables associated would have to be inner joined to narrow results
---Primary keys of the "loans" and "user" tables are joined
---The loans.id column is joined with the transactions.loan_id column
---Specific information is retrieved from "transactions" table that is associated with withdrawn loans
+--Primary key of the "users" table and user_id column of "loans" table is joined
+--primary key of "loans" table is joined with loans_id column in "transactions" table
 where loans.loan_status in ('active','repaid') and transactions.t_type = 'disbursement'
 --The where clause is used to specify certain conditions such as active or repaid loans, as well as transaction types that are disbursements
 order by users.created desc;
